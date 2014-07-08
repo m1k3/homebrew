@@ -1,9 +1,8 @@
 require 'formula'
 
 class Webauth <Formula
-  url 'http://webauth.stanford.edu/dist/OLD/webauth-3.7.3.tar.gz'
+  url 'http://webauth.stanford.edu/dist//webauth-4.6.0.tar.gz'
   homepage 'http://webauth.stanford.edu/'
-  md5 '15c1dc3217e51b55bd2e77856ae7e0e0'
 
   def install
     (prefix+'krb5.conf').write krb5_conf
