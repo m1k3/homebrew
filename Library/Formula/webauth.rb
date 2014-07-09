@@ -1,21 +1,22 @@
 require 'formula'
 
 class Webauth <Formula
-  url 'http://webauth.stanford.edu/dist/OLD/webauth-4.5.5.tar.gz'
+  url 'http://webauth.stanford.edu/dist/webauth-4.5.5.tar.gz'
   homepage 'http://webauth.stanford.edu/'
+  #md5 '15c1dc3217e51b55bd2e77856ae7e0e0'
 
   def install
     (prefix+'krb5.conf').write krb5_conf
     system './configure', "--prefix=#{prefix}", "--libexecdir=#{lib}", "KRB5_CONFIG=#{prefix}/krb5.conf", "--disable-dependency-tracking"
     system 'make install'
   end
-  
+
   def caveats; <<-EOS
 If this is your first install, please copy the file in #{prefix}/krb5.conf to /etc/krb5.conf with the following command:
     sudo cp #{prefix}/krb5.conf /etc/krb5.conf
 EOS
   end
-  
+
   def krb5_conf
     return <<-EOS
 # /etc/krb5.conf -- Kerberos V5 general configuration.
