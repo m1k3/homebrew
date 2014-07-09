@@ -1,7 +1,7 @@
 require 'formula'
 
 class Webauth <Formula
-  url 'http://webauth.stanford.edu/dist/webauth-4.5.5.tar.gz'
+  url 'http://webauth.stanford.edu/dist/OLD/webauth-4.5.5.tar.gz'
   homepage 'http://webauth.stanford.edu/'
   #md5 '15c1dc3217e51b55bd2e77856ae7e0e0'
 
